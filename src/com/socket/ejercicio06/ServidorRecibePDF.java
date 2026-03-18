@@ -9,8 +9,6 @@ import java.net.Socket;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-import com.socket.plantilla.Servidor;
-
 public class ServidorRecibePDF {
 
 
