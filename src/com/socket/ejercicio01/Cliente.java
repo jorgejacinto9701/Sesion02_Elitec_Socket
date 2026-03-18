@@ -1,0 +1,40 @@
+package com.socket.ejercicio01;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+
+public class Cliente {
+
+	private final String HOST = "localhost";
+	private final int PUERTO = 13;
+	
+	public Cliente() {
+		try {
+			Socket cliente = new Socket(HOST, PUERTO);
+			
+			//flujos de la comunicación
+			BufferedReader entrada = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+			PrintWriter salida = new PrintWriter(cliente.getOutputStream(), true);
+			
+			//comunicacion con el servidor
+			salida.println("PLATINIUM");
+			
+			//respuesta del servidor
+			String respuesta = entrada.readLine();
+			
+			System.out.println("Respuesta del servidor ==> " + respuesta);
+			
+			
+			cliente.close();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public static void main(String[] args) {
+		new Cliente();
+	}
+}
