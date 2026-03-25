@@ -19,7 +19,7 @@ public class Cliente {
 			File archivoPDF = new File("C:/cliente/data.zip");
 			FileInputStream fis = new FileInputStream(archivoPDF);
 			DataOutputStream salida = new DataOutputStream(cliente.getOutputStream());
-			
+			 
 			
 			//Enviar el achivo PDF al servidor
 			byte[] buffer = new byte[4096];

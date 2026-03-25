@@ -13,7 +13,7 @@ public class MySqlDBConexion {
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
-	}
+	} 
 
 	// Metodo para crear conexiones
 	public static Connection getConexion() {

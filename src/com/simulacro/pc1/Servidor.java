@@ -37,7 +37,7 @@ public class Servidor {
 				int bytesLeidos;
 				while ((bytesLeidos = entrada.read(buffer)) != -1) {
 					fos.write(buffer, 0, bytesLeidos);
-				}
+				} 
 				
 				fos.close();
 				entrada.close();
